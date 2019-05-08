@@ -1,0 +1,26 @@
+import matplotlib
+import PIL
+from PIL import Image
+import requests
+import json
+import numpy as np
+import PIL.Image
+#import face_recognition 
+
+  
+img  = Image.open('IMG_0356.png')  
+img.show()
+
+#image = face_recognition.load_image_file("IMG_0356.png")
+#face_locations = face_recognition.face_locations(image)
+
+api_exchange = "70ad08013a0e4a0a82069b0609254bf3"
+api_response = requests.get(api_exchange)
+data = api_response.json()
+
+userinput = input("Pls copy paste your image address here to upload it to the program: ")
+
+image_perdiction = data
+
+
+#bascially in this process, i still have no idea how to display image or to put image into api...
